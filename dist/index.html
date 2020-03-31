@@ -4,9 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
     <title>Welcome To My Portfolio</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <header>
+      <!-- Three dashed white lines -->
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+
+      <!-- Inside hamburger menu -->
+      <nav class="menu">
+        <!-- Portrait section on the left -->
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <!-- Menu items on the right -->
+        <ul class="menu-nav">
+          <li class="nav-item">
+            <a href="/" class="nav-link">
+              HOME
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/about.html" class="nav-link">
+              ABOUT ME
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/work.html" class="nav-link">
+              MY WORK
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/contact.html" class="nav-link">
+              CONTACT ME
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="home">
+      <h1 class="lg-heading">
+        Alif <span class="text-secondary">Azmeer</span>
+      </h1>
+      <h2 class="sm-heading">
+        Web Developer, Programmer, Guitarist & Tuition Teacher
+      </h2>
+      <!-- Icons taken from font awesome site -->
+      <div class="icons">
+        <a href="#!">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

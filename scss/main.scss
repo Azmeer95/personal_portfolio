@@ -1,6 +1,85 @@
-$primary-color: #444;
+@import "config";
+
+// Box-sizing property for everything
+* {
+  // Padding on the inside will not affect width, height. Will be within the box model
+  box-sizing: border-box;
+}
 
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  // Spacing between lines
+  line-height: 1.5;
+}
+
+// Headings
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  // Will be attached to the headings, not within
+  &.lg-heading {
+    // rem is multiplier of elements size, where 1rem = 16px
+    font-size: 6rem;
+  }
+
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    // SASS property, which adds a background to the smaller heading. To make it transparent, enclose in rgba
+    background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
+  }
+}
+
+a {
+  color: #fff;
+  // Take away underline of links
+  text-decoration: none;
+}
+
+header {
+  // Scrolling will not make it move
+  position: fixed;
+  // How close to me an element is, bigger the number, closer
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+main {
+  padding: 4rem;
+  height: 100%;
+
+  // Style icons inside main tag - nesting
+  .icons {
+    margin-top: 1rem;
+  }
+
+  a {
+    padding: 0.4rem;
+
+    &:hover {
+      color: $secondary-color;
+      // Color fading in/out when hovering on icons
+      @include easeOut();
+    }
+  }
+
+  &#home {
+    // No scrollbars on homepage
+    overflow: hidden;
+    // vh(view-port height) - takes 20 slices of 100 slices
+    h1 {
+      margin-top: 20vh;
+    }
+  }
 }

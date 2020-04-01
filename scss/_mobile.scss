@@ -48,6 +48,18 @@
       height: 150px;
     }
   }
+
+  .about-info {
+    // Maps out position of contents
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
+
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
